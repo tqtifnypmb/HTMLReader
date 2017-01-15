@@ -83,9 +83,9 @@ I needed to scrape HTML like a browser. I couldn't find a good choice for iOS.
 
 Other Objective-C libraries I came across (e.g. [hpple][] and [Ono][]) use libxml2 and inherit its shortcomings.
 
-There are C libraries such as [Gumbo][] or [Hubbub][], but you need to shuffle data to and from Objective-C.
+There are C libraries such as [Gumbo][] or [Hubbub][], but you need to shuffle data to and from Objective-C. (Also Gumbo wasn't publicly announced until after HTMLReader was far enough along.)
 
-[WebKit][] ships with iOS, but its HTML parsing abilities are considered private API. I consider a round-trip through UIWebView inappropriate for parsing HTML. And I didn't make it very far into building my own copy of WebCore.
+[WebKit][] ships with iOS, but its HTML parsing abilities are considered private API. I consider a round-trip through a web view inappropriate for parsing HTML. And I didn't make it very far into building my own copy of WebCore.
 
 [Google Toolbox for Mac][GTMNSString+HTML] will escape and unescape strings for HTML (e.g. `&amp;` ⇔ `&`) but, again, not like a modern browser. For example, GTM will not unescape `&#65` (note the missing semicolon).
 
