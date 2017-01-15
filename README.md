@@ -62,9 +62,9 @@ You have choices:
 * Add the following line to your [Package.swift][Swift Package Manager]:
     
    `.Package(url: "https://github.com/nolanw/HTMLReader",
-             majorVersion: 0, minorVersion: 9)`
+             majorVersion: 2)`
    
-   You'll need to invoke `swift build` like so: `swift build -Xcc -fobjc-arc`.
+   You'll need to invoke `swift package` with an extra option like so: `swift package [command] -Xcc -fobjc-arc`.
 * Clone this repository (perhaps add it as a submodule) and add `HTMLReader.xcodeproj` to your project/workspace. Then add `HTMLReader.framework` to your app target. (Or, if you're targeting iOS earlier than 8.0: add `libHTMLReader.a` to your app target and `"$(SYMROOT)/include"` to your app target's Header Search Paths.)
 
 HTMLReader has no dependencies other than Foundation.
